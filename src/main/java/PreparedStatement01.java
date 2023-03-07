@@ -38,19 +38,19 @@ public class PreparedStatement01 {
         System.out.println("updated: " + updated);
 
         ResultSet rs1 = st.executeQuery("SELECT * FROM bolumler");
-        while(rs1.next()){
-            System.out.println(rs1.getInt("bolum_id")+"--"+rs1.getString("bolum")+"--"+rs1.getInt("taban_puanı"));
+        while (rs1.next()) {
+            System.out.println(rs1.getInt("bolum_id") + "--" + rs1.getString("bolum") + "--" + rs1.getInt("taban_puanı"));
         }
 
         System.out.println("-------------ÖRNEK1---------------");
         //ÖRNEK2:Prepared Statement kullanarak bolumler tablosunda Edebiyat bölümünün taban_puanı'nı 455 olarak güncelleyiniz.
+        prst.setInt(1, 455);
+        prst.setString(2, "Edebiyat");
+        int updated2 = prst.executeUpdate();
+        System.out.println("updated2: " + updated2);
 
-
-
-
-
-
+        prst.close();
+        st.close();
+        con.close();
     }
-
-
 }
