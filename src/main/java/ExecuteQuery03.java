@@ -34,6 +34,11 @@ public class ExecuteQuery03 {
         int deleted=st.executeUpdate(sql3);
         System.out.println("Silinen: "+deleted);
 
+        System.out.println("-------------ÖRNEK4---------------");
+        //ÖRNEK4:developers tablosundan prog_lang Css olanları siliniz.
+        String sql4= "DELETE FROM developers WHERE prog_lang='Css'";
+        int deleted2=st.executeUpdate(sql4);
+        System.out.println("Silinen: "+deleted2);
 
     }
 
