@@ -23,9 +23,16 @@ public class ExecuteQuery03 {
 
         System.out.println("-------------ÖRNEK2---------------");
         //ÖRNEK2:developers tablosuna yeni bir developer ekleyiniz.
-        String sql2 = "INSERT INTO developers(name,salary,prog_lang) VALUES('Ilker',5300,'React')";
-        //int inserted=  st.executeUpdate(sql2);
-        //System.out.println("Eklenen kayit sayisi: "+inserted);
+         String sql2 = "INSERT INTO developers(name,salary,prog_lang) VALUES('Ilker',5300,'React')";
+//        int inserted=  st.executeUpdate(sql2);
+//        System.out.println("Eklenen kayit sayisi: "+inserted);
+
+
+        System.out.println("-------------ÖRNEK3---------------");
+        //ÖRNEK3:developers tablosundan id'si 14 olanı siliniz.
+        String sql3= "DELETE FROM developers WHERE id=14";
+        int deleted=st.executeUpdate(sql3);
+        System.out.println("Silinen: "+deleted);
 
 
     }
