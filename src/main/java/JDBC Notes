@@ -1,0 +1,80 @@
+JDBC Test
+
+1-JDBC hakkında hangisi yanlıştır?
+*Bir Java API'dır.
+*Java ile bir veritabanına erişmek ve
+işlemler yapmak için kullanılır.
+*Açılımı Java Database Connectivity'dir.
+--Java uygulamaları arasında köprü görevi görür.
+
+2-Önceden derlenmiş SQL komutları oluşturmak için hangisi kullanılır
+--PreparedStatement
+*ParametrizedStatement
+*Statement
+*CallableStatement
+
+3-Veritabanıyla yapılan tüm iletişim yalnızca ... nesnesi aracılığıyla yapılır.
+*Statement
+--Connection
+*ResultSet
+*DriverManager
+
+4-..., SQL sorgusu çalıştırıldıktan sonra veritabanından alınan
+verileri saklar. Verilerin arasında hareket etmemizi sağlar.
+
+*Statement
+*Driver
+*Transaction
+--ResultSet
+
+5-JDBC de DML komutları(insert, update,delete) ile oluşturulan sorgu nasıl çalıştırılır?
+*Statementın execute() metodu ile
+*Statementın executeQuery() metodu ile
+*Statementın executeUpdate() metodu ile
+--Statementın execute() veya executeUpdate() metodu ile
+
+6-JDBC de Connection'ın close() metodu kullanıldığında hangisi gerçekleşir?
+--Veri tabanı bağlantısı kesilir, transaction sona erer.
+*Transaction içerisinde gerçekleşen veri tabanı değişiklikleri kalıcı hale gelir.
+*Veri tabanı içerisindeki değişiklikler iptal edilir.
+*Savepoint(kayıt noktası) durumuna geri dönülür.
+
+7-PreparedStatement durumunda hangi komutlar ile sorgu oluşturabilir?
+*update,delete,insert
+*hiçbiri
+*select
+--hepsi
+
+8-Bir JDBC ResultSet nesnesi, hangi SQL komutu hangi metod ile çalıştırıldığında oluşturulur?
+- SELECT-executeQuery()
+* SELECT-execute()
+* UPDATE-executeUpdate()
+* DELETE-executeUpdate()
+
+9-PreparedStatement, hangi sınıfın bir alt sınıfıdır?
+ResultSet
+*Statement
+Connection
+CallableStatement
+
+10-Statement ile PreparedStatement hakkında hangisi yanlıştır?
+PreparedStatement, Statement'dan daha performanslıdır.
+PreparedStatement Statement'ı genişleten(extend eden) bir interfacedir.
+--PreparedStatement ve Statement ile oluşturulan sorgularda parametre kullanılabilir.
+PreparedStatement önceden derlenmiş sorguları, Statement ise statik sorguları temsil eder.
+
+11-executeUpdate() metodu geriye hangisini döndürür?
+Veri tabanından getirilen kayıt sayısını
+ResultSet nesnesi
+Update edilen kayıt varsa True yoksa False
+--Sorgu sonucunda etkilenen kayıt sayısı
+
+12-JDBC ile veri tabanında sorgu çalıştırmak için gerekli işlemleri sıralayınız.
+Veri tabanına bağlanma
+Statement oluşturma
+execute,executeQuery veya executeUpdate ile sorguyu çalıştırma
+close ile statement ve bağlantıyı kapatma
+
+13-Veri tabanında parçalanılamaz en küçük işlem birimi nedir?
+transaction
+15-JDBC de trans
